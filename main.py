@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-VERSION = "v1.2"
-VERSION_DESCRIPTION = "Server upgraded to the latest Debian stable."
+VERSION = "v1.0"
+VERSION_DESCRIPTION = "Finally did some version control. Going back to v1.0 for this"
 
 intents = discord.Intents.default()
 intents.message_content = True

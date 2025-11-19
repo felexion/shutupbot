@@ -22,19 +22,21 @@ class shutUpBot(discord.Client):
 client = shutUpBot()
 
 @client.event
-async def onReady():
+async def on_ready():
     print(f'Logged in as {client.user}!')
 
 @client.event
-async def onMessage(message):
+async def on_message(message):
     if message.author == client.user:
         return
     
     if random.randint(1, 10) == 1:
         await message.reply("Shut up!")
+        print("The bot said Shut Up!")
 
     elif random.randint(1, 100) == 1:
         await message.reply("YOU REALLY NEED TO SHUT UP!")
+        print("The bot said YOU REALLY NEED TO SHUT UP!")
 
 @client.tree.command(name="shut", description="Tells you to shut up!")
 async def shutCommand(interaction: discord.Interaction):

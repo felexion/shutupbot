@@ -5,8 +5,12 @@ from discord import app_commands
 from dotenv import load_dotenv
 
 load_dotenv()
-VERSION = "v.1.0.3.rc1"
+VERSION = "v.1.0.3.rc2"
 VERSION_DESCRIPTION = "mention and reply detection added."
+# TODO: add error messages
+# TODO: add avoiding replying in dms
+# TODO: add rate-limit handling if spammy
+# TODO: improve logging system
 
 intents = discord.Intents.default()
 intents.message_content = True

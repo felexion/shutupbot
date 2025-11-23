@@ -5,8 +5,8 @@ from discord import app_commands
 from dotenv import load_dotenv
 
 load_dotenv()
-VERSION = "v.1.0.2"
-VERSION_DESCRIPTION = "New Code!"
+VERSION = "v.1.0.3.rc1"
+VERSION_DESCRIPTION = "mention and reply detection added."
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -30,13 +30,27 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if random.randint(1, 10) == 1:
-        await message.reply("Shut up!")
-        print("The bot said Shut Up!")
+    if message.reference and message.reference.resolved:
+        replied_message = message.reference.resolved
+        if replied_message.author == client.user:
+            await message.reply("Just shut up!")
+            print("Bot was replied. Told user to shut up.")
+            return    
 
-    elif random.randint(1, 100) == 1:
+    if client.user in message.mentions:
+        await message.reply("Shut up!")
+        print("Bot was mentioned. Told user to shut up.")
+        return
+
+    rand_val = random.randint(1, 100)
+
+    if rand_val == 1:
         await message.reply("YOU REALLY NEED TO SHUT UP!")
         print("The bot said YOU REALLY NEED TO SHUT UP!")
+
+    elif rand_val <= 11:
+        await message.reply("Shut up!")
+        print("The bot said Shut up!")
 
 @client.tree.command(name="shut", description="Tells you to shut up!")
 async def shutCommand(interaction: discord.Interaction):

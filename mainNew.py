@@ -5,8 +5,8 @@ from discord import app_commands
 from dotenv import load_dotenv
 
 load_dotenv()
-VERSION = "v.1.0.3.rc2"
-VERSION_DESCRIPTION = "mention and reply detection added."
+VERSION = "v.1.0.3.rc3"
+VERSION_DESCRIPTION = "better helpcommand response"
 # TODO: add error messages
 # TODO: add avoiding replying in dms
 # TODO: add rate-limit handling if spammy
@@ -62,13 +62,32 @@ async def shutCommand(interaction: discord.Interaction):
 
 @client.tree.command(name="help", description="Show how the bot works.")
 async def helpCommand(interaction: discord.Interaction):
-    msg = (
-        f"Shut Up Bot {VERSION} by felexion\n"
-        f"Version Description: {VERSION_DESCRIPTION}\n"
-        "This bot will tell you to shut up randomly!\n"
-        "No, I will not help you."
+
+    embed = discord.Embed(
+        title=f"Shut Up Bot {VERSION}",
+        description="This bot tells you to shut up!"
     )
-    await interaction.response.send_message(msg)
+    embed.add_field(
+        name="Version Info",
+        value=f"{VERSION_DESCRIPTION}",
+        inline=False
+    );
+
+    embed.add_field(
+        name="Source Code",
+        value="[GitHub Repository](YOUR_GITHUB_LINK_HERE)",
+        inline=False
+    )
+
+    embed.add_field(
+        name="Privacy Policy",
+        value="I don’t collect anything. Zero. Nada. Zilch. I couldn’t care less about your data even if you begged me.",
+        inline=False
+    )
+
+    embed.set_footer(text="No, I will not help you.")
+    
+    await interaction.response.send_message(embed=embed)
 
 
 token = os.getenv("TOKEN")

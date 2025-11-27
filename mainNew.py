@@ -81,7 +81,7 @@ async def helpCommand(interaction: discord.Interaction):
 
     embed.add_field(
         name="Privacy Policy",
-        value="I don't collect your data. LMAO",
+        value="I don't collect your data. LMAO. XD. Fixing commit errors right now.",
         inline=False
     )
 

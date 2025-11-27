@@ -6,3 +6,6 @@ __pycache__/
 shutupbotlogs.log
 .DS_Store
 Thumbs.db
+Dockerfile
+requirements.txt
+.dockerignore

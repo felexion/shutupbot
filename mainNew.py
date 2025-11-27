@@ -81,12 +81,11 @@ async def helpCommand(interaction: discord.Interaction):
 
     embed.add_field(
         name="Privacy Policy",
-        value="I don’t collect anything. Zero. Nada. Zilch. I couldn’t care less about your data even if you begged me.",
+        value="I don't collect your data. LMAO",
         inline=False
     )
 
-    embed.set_footer(text="No, I will not help you.")
-    
+    embed.set_footer(text="No, I will not help you")
     await interaction.response.send_message(embed=embed)
 
 

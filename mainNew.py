@@ -5,7 +5,7 @@ from discord import app_commands
 from dotenv import load_dotenv
 
 load_dotenv()
-VERSION = "v.1.0.3.rc3"
+VERSION = "v.1.0.3.rc6"
 VERSION_DESCRIPTION = "better helpcommand response"
 # TODO: add error messages
 # TODO: add avoiding replying in dms
@@ -75,7 +75,7 @@ async def helpCommand(interaction: discord.Interaction):
 
     embed.add_field(
         name="Source Code",
-        value="[GitHub Repository](YOUR_GITHUB_LINK_HERE)",
+        value="[Shut Up Bot on GitHub](https://github.com/felexion/shutupbot)",
         inline=False
     )
 

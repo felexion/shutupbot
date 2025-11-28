@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-VERSION = "v1.0.1"
-VERSION_DESCRIPTION = "Finally did some version control. Going back to v1.0.1 for this"
+VERSION = "v1.1.3"
+VERSION_DESCRIPTION = "Added Docker files to repo"
 
 intents = discord.Intents.default()
 intents.message_content = True

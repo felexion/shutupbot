@@ -20,8 +20,15 @@ logging.basicConfig(
 logger = logging.getLogger("ShutUpBot")
 
 load_dotenv()
-VERSION = "v.1.1.1"
-VERSION_DESCRIPTION = "Logging system improved. Added spam cooldown. Added some stuff on gitignore"
+VERSION = "v.1.1.4"
+VERSION_DESCRIPTION = "Adding todo messages for future plans"
+"""
+
+    TODO: Welcome message
+    TODO: Request user for percentile
+    TODO: 0.067% Chance to say SHIT UP!
+
+"""
 
 SPAM_COOLDOWN_SECONDS = 5.0
 user_spam_tracker = {}

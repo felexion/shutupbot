@@ -20,12 +20,12 @@ logging.basicConfig(
 logger = logging.getLogger("ShutUpBot")
 
 load_dotenv()
-VERSION = "v.1.1.4"
-VERSION_DESCRIPTION = "Adding todo messages for future plans"
+VERSION = "v.1.1.5"
+VERSION_DESCRIPTION = "Added update.sh for fun"
 """
 
     TODO: Welcome message
-    TODO: Request user for percentile
+    TODO: Create a command /chance to change the Shut Up random percentile, different for every server (state) possibly a perserverConfig.json
     TODO: 0.067% Chance to say SHIT UP!
 
 """

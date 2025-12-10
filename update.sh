@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# WARNING: UNTESTED CODE LMAOOOO
-
 echo "Building Shut Up Bot..."
 docker build -t shutupbot .
 

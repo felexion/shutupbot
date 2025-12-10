@@ -19,6 +19,10 @@ A lightweight chaos generator for your server. Version **1.2.1**.
 
 - Improved `README.md`.
 
+## Changes in 1.2.3
+
+- Removed "untested" comment in `update.sh`.
+
 ## Commands
 
 - For more information, run `/help`.

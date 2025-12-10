@@ -1,2 +1,24 @@
-# shutupbot
-This bot tells Discord users to shut up!
+# Shut Up Bot
+
+A lightweight chaos generator for your server. Version **1.2.1**.
+
+## Features
+
+- **10% chance** to reply to a message with “shut up”.
+- **1% chance** to reply with an angrier version.
+- Triggered when:
+  - The bot is mentioned
+  - A user replies to one of the bot’s messages
+  - A user runs `/shut`
+
+## Changes in 1.2.1
+
+- Removed the deprecated `main.py` file for a cleaner project structure.
+
+## Changes in 1.2.2
+
+- Improved `README.md`.
+
+## Commands
+
+- For more information, run `/help`.

@@ -1,6 +1,6 @@
 # Version control
-VERSION = "v1.3.1"
-VERSION_DESCRIPTION = "Added more replies on bot reply to message."
+VERSION = "v1.4"
+VERSION_DESCRIPTION = "Improved update.sh"
 
 # Spam cooldown
 SPAM_COOLDOWN_SECONDS = 5.0

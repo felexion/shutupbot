@@ -27,6 +27,10 @@ A lightweight chaos generator for your server. Version **1.2.1**.
 
 - Added more replies on bot reply to message.
 
+## Changes in 1.4
+
+- Improved `update.sh`.
+
 ## Commands
 
 - For more information, run `/help`.

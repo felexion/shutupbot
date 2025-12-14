@@ -12,6 +12,17 @@ class Events(commands.Cog):
         self.bot = bot
         self.user_spam_tracker = {}
 
+        self.reply_responses = [
+            "Really? Just shut up.",
+            "Shut up!",
+            "Whatever, shut up.",
+            "You should shut up.",
+            "You need to shut up.",
+            "Hey.... maybe shut up?",
+            "Just shut up, already.", 
+            "Your message is irrelevant. Shut up."
+        ]
+
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.author == self.bot.user:
@@ -31,13 +42,14 @@ class Events(commands.Cog):
         if message.reference and message.reference.resolved:
             replied_message = message.reference.resolved
             if replied_message.author == self.bot.user:
-                await message.reply("Just shut up!")
-                logger.info("Replied to a user who replied to bot.")
-                return
-            
+                response = random.choice(self.reply_responses)
+                await message.reply(response)
+                logger.info(f"Replied to a user who replied to bot. Response: '{response}'")
+                triggered = True
+        
         elif self.bot.user in message.mentions:
             await message.reply("Shut up!")
-            logger.info("Replied to mention from a user.")
+            logger.info(f"Replied to mention from a user.")
             triggered = True
 
         else:

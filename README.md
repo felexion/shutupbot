@@ -23,6 +23,10 @@ A lightweight chaos generator for your server. Version **1.2.1**.
 
 - Removed "untested" comment in `update.sh`.
 
+## Changes in 1.3.1
+
+- Added more replies on bot reply to message.
+
 ## Commands
 
 - For more information, run `/help`.

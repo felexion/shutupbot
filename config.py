@@ -1,6 +1,6 @@
 # Version control
-VERSION = "v1.2.3"
-VERSION_DESCRIPTION = "Removed untested comment in update.sh"
+VERSION = "v1.3.1"
+VERSION_DESCRIPTION = "Added more replies on bot reply to message."
 
 # Spam cooldown
 SPAM_COOLDOWN_SECONDS = 5.0

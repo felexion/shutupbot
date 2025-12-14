@@ -1,6 +1,6 @@
 # Shut Up Bot
 
-A lightweight chaos generator for your server. Version **1.2.1**.
+A lightweight chaos generator for your server.
 
 ## Features
 
